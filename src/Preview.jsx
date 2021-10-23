@@ -8,8 +8,7 @@ const Preview = () => {
   const [prevState, setPstate] = useState({});
   const { id, recv } = useParams();
   const dispatch = useDispatch();
-  console.log(id, recv);
-  console.log("satte", state);
+
   state.then((data) => {
     if (recv == "pState") {
       let data_ = data.pState.filter((e) => {

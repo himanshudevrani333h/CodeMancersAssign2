@@ -1,11 +1,11 @@
 const defaultState = {
-    pState : [],
+     pState : [],
      uState : [],
      tState : []
 }
 
 
-export const popularState = async( state =  defaultState, action)=>{
+export const reducer = async( state =  defaultState, action)=>{
   switch(action.type){
     case "POPULAR_ACTION":
          let pdata = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=9024101704098faae70f606b58fbcafd")
@@ -27,11 +27,3 @@ export const popularState = async( state =  defaultState, action)=>{
         return defaultState;
   }
 }
-
-// export const upcomingState = () =>{
-
-// }
-
-// export const topRatedState = () => {
-
-// }
