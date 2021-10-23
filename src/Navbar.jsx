@@ -24,7 +24,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item" key={0}>
               <Link to = "/home" className="nav-link active" aria-current="page"  onClick={(e)=>{
                    let atag = document.querySelectorAll(".nav-link");
                    for(let i =0; i<atag.length; i++){
@@ -39,7 +39,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item" >
+            <li className="nav-item"key={1} >
               <Link to={"/feature"} className="nav-link "  onClick={(e)=>{
                   
                   let atag = document.querySelectorAll(".nav-link");
@@ -56,7 +56,7 @@ const Navbar = () => {
                 Features
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" key={2}>
               <Link to="pricing" className="nav-link "  onClick={(e)=>{
                   let atag = document.querySelectorAll(".nav-link");
                   for(let i =0; i<atag.length; i++){

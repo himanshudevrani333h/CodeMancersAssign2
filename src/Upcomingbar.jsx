@@ -19,8 +19,8 @@ const Upcomingbar = () => {
   return (
     <div className="ubcontainer">
       {upcomingState.length > 0
-        ? upcomingState.map((el) => {
-            return <Cards data={el} st={"uState"}/>;
+        ? upcomingState.map((el,i) => {
+            return <Cards data={el} st={"uState"} key={i}/>;
           })
         : ""}
     </div>

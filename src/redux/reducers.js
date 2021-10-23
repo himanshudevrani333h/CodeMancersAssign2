@@ -11,7 +11,6 @@ export const popularState = async( state =  defaultState, action)=>{
          let pdata = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=9024101704098faae70f606b58fbcafd")
          let result = await pdata.json();
          defaultState.pState =  [...defaultState.pState,...result.results]
-         console.log("line 14 reducer popular",defaultState.pState);
          return defaultState;
     case "TOPRATED_ACTION":
         let trdata = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9024101704098faae70f606b58fbcafd")

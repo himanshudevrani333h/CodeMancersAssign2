@@ -18,8 +18,8 @@ const Toprated = () => {
   return (
     <div className="trcontainer">
       {topRatedState.length > 0
-        ? topRatedState.map((el) => {
-            return <Cards data={el} st={"tState"} />;
+        ? topRatedState.map((el,i) => {
+            return <Cards data={el} st={"tState"} key={i} />;
           })
         : ""}
     </div>

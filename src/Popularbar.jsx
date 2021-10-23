@@ -10,21 +10,18 @@ const Popularbar = () => {
   const [PopularState, setPstate] = useState([]);
 
   state.then((data) => {
-    console.log("line 12", data.pState);
     setPstate(data.pState);
   });
 
   useEffect(() => {
     dispatch(PopularCreate());
-    console.log(PopularState);
   }, []);
 
   return (
     <div className="pbcontainer">
       {PopularState.length > 0
-        ? PopularState.map((el) => {
-            console.log("image ", el.poster_path);
-            return <Cards data={el} st={"pState"} />;
+        ? PopularState.map((el,i) => {
+            return <Cards data={el} st={"pState"} key ={i}/>;
           })
         : ""}
     </div>
