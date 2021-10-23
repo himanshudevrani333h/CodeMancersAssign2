@@ -1,0 +1,26 @@
+.previewContainer {
+  position: absolute;
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100%;
+  border: 1px solid;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  display: flex;
+}
+
+.upperbox {
+  height: 100%;
+  width: 30vw;
+  border: 1px solid;
+}
+.prevImg {
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailbox {
+  height: 50vh;
+  width: 50vw;
+  color: white;
+}
