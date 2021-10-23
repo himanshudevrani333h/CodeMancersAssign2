@@ -2,7 +2,6 @@ import  "./pbar.css"
 import { Link } from "react-router-dom";
 import { Redirect, useHistory } from "react-router";
 const Navbar = () => {
-    const history = useHistory()
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
       <div className="container-fluid">

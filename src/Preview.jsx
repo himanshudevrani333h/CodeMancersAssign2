@@ -50,6 +50,7 @@ const Preview = () => {
           <img
             className="prevImg"
             src={`https://image.tmdb.org/t/p/w500${prevState.poster_path}`}
+            alt="..loading"
           />
         ) : (
           ""
