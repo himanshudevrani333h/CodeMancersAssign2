@@ -7,6 +7,8 @@ const Toprated = () => {
   const state = useSelector((state) => state);
   const [topRatedState, setTopRated] = useState([]);
   const dispatch = useDispatch();
+
+   // state gives us a promise so to resolve promise we use .then
   state.then((data) => {
     setTopRated(data.tState);
   });

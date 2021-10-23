@@ -8,7 +8,8 @@ const Popularbar = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const [PopularState, setPstate] = useState([]);
-
+  
+  // state gives us a promise so to resolve promise we use .then
   state.then((data) => {
     setPstate(data.pState);
   });

@@ -8,6 +8,8 @@ const Upcomingbar = () => {
   const state = useSelector((state) => state);
   const [upcomingState, setUpcoming] = useState([]);
   const dispatch = useDispatch();
+
+  // state gives us a promise so to resolve promise we use .then
   state.then((data) => {
     setUpcoming(data.uState);
   });
@@ -19,8 +21,8 @@ const Upcomingbar = () => {
   return (
     <div className="ubcontainer">
       {upcomingState.length > 0
-        ? upcomingState.map((el,i) => {
-            return <Cards data={el} st={"uState"} key={i}/>;
+        ? upcomingState.map((el, i) => {
+            return <Cards data={el} st={"uState"} key={i} />;
           })
         : ""}
     </div>

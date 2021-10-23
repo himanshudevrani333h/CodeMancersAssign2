@@ -11,6 +11,8 @@ const Cards = (props) => {
           let a = document.querySelectorAll(".nav-link")
           a[0].classList.remove("active")
         history.push({
+          // params are send to the /preview path 
+          // First is data ID and Second is the name of arr which is stored in defaultState from reducer  
           pathname: `/preview/${props.data.id}/${props.st}`,
           data: props.data,
         });

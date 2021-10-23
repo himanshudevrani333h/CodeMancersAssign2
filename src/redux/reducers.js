@@ -4,7 +4,8 @@ const defaultState = {
      tState : []
 }
 
-
+// reducer for fetching data of each Tag ie., pupular, toprated, upcoming
+// async await is used to do asynchronus work
 export const reducer = async( state =  defaultState, action)=>{
   switch(action.type){
     case "POPULAR_ACTION":
