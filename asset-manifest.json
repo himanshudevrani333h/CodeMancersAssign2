@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.7656abe5.chunk.css",
-    "main.js": "/home/static/js/main.cc8aaef2.chunk.js",
-    "main.js.map": "/home/static/js/main.cc8aaef2.chunk.js.map",
-    "runtime-main.js": "/home/static/js/runtime-main.8d00caae.js",
-    "runtime-main.js.map": "/home/static/js/runtime-main.8d00caae.js.map",
-    "static/js/2.43d0a727.chunk.js": "/home/static/js/2.43d0a727.chunk.js",
-    "static/js/2.43d0a727.chunk.js.map": "/home/static/js/2.43d0a727.chunk.js.map",
-    "index.html": "/home/index.html",
-    "static/css/main.7656abe5.chunk.css.map": "/home/static/css/main.7656abe5.chunk.css.map",
-    "static/js/2.43d0a727.chunk.js.LICENSE.txt": "/home/static/js/2.43d0a727.chunk.js.LICENSE.txt"
+    "main.css": "/CodeMancersAssign2/static/css/main.7656abe5.chunk.css",
+    "main.js": "/CodeMancersAssign2/static/js/main.6ba41e1f.chunk.js",
+    "main.js.map": "/CodeMancersAssign2/static/js/main.6ba41e1f.chunk.js.map",
+    "runtime-main.js": "/CodeMancersAssign2/static/js/runtime-main.89e0139a.js",
+    "runtime-main.js.map": "/CodeMancersAssign2/static/js/runtime-main.89e0139a.js.map",
+    "static/js/2.43d0a727.chunk.js": "/CodeMancersAssign2/static/js/2.43d0a727.chunk.js",
+    "static/js/2.43d0a727.chunk.js.map": "/CodeMancersAssign2/static/js/2.43d0a727.chunk.js.map",
+    "index.html": "/CodeMancersAssign2/index.html",
+    "static/css/main.7656abe5.chunk.css.map": "/CodeMancersAssign2/static/css/main.7656abe5.chunk.css.map",
+    "static/js/2.43d0a727.chunk.js.LICENSE.txt": "/CodeMancersAssign2/static/js/2.43d0a727.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d00caae.js",
+    "static/js/runtime-main.89e0139a.js",
     "static/js/2.43d0a727.chunk.js",
     "static/css/main.7656abe5.chunk.css",
-    "static/js/main.cc8aaef2.chunk.js"
+    "static/js/main.6ba41e1f.chunk.js"
   ]
 }
