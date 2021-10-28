@@ -1,5 +1,5 @@
 import "./pbar.css";
-import { UpcomingCreate } from "./redux/action";
+import { upcomingFetch } from "./redux/action";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Cards from "./Cards";
@@ -15,12 +15,12 @@ const Upcomingbar = () => {
   });
 
   useEffect(() => {
-    dispatch(UpcomingCreate());
+    dispatch(upcomingFetch());
   }, []);
 
   return (
     <div className="ubcontainer">
-      {upcomingState.length > 0
+      {upcomingState
         ? upcomingState.map((el, i) => {
             return <Cards data={el} st={"uState"} key={i} />;
           })

@@ -12,9 +12,11 @@ const App = () => {
       <Router>
         <Navbar />
         <Switch>
+          
           <Route exact path={"/"}>
             <Redirect to="/home" />
           </Route>
+
           <Route path={"/home"}>
             <div className="myContainer">
               <h6 className="tgs">Popular</h6>
@@ -26,7 +28,7 @@ const App = () => {
             </div>
           </Route>
 
-          <Route path={"/preview/:id/:recv"}>
+          <Route path={"/preview/:id"}>
             <Preview />
           </Route>
         </Switch>

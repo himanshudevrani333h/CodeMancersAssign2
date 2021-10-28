@@ -4,18 +4,20 @@
   flex-shrink: 0;
   margin-right: 5px;
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  text-decoration: none;
 }
 
 .card-text {
-    height: 30%;
-    overflow: hidden;
-    font-size: 10px;
-    font-family: -webkit-pictograph;
-    color:#b2bec3;
-    text-align:left;
-    font-size: 12px;
+ display: -webkit-box;
+ color:  #b2bec3;
+ font-size: 12px;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 3;
+ overflow: hidden;
 }
+
+
 .card-img-top {
   height: 70%;
   object-fit: fill;

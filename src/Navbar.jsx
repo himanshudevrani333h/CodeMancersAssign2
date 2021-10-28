@@ -1,17 +1,11 @@
 import "./pbar.css";
-import { Link } from "react-router-dom";
-import { Redirect } from "react-router";
+import { Link, NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
       <div className="container-fluid">
-        <Link
-          to="/home"
-          className="navbar-brand"
-          onClick={() => {
-            <Redirect to="/home" />;
-          }}
-        >
+        <Link to="/home" className="navbar-brand">
           NETPRIME
         </Link>
         <button
@@ -28,69 +22,32 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item" key={0}>
-              <Link
+              <NavLink
                 to="/home"
-                className="nav-link active"
+                className="nav-link"
+                activeClassName="active"
                 aria-current="page"
-                onClick={(e) => {
-                  // for removing previously selected tags
-                  let atag = document.querySelectorAll(".nav-link");
-                  for (let i = 0; i < atag.length; i++) {
-                    if (atag[i].classList.contains("active"))
-                      atag[i].classList.remove("active");
-                  }
-
-                  // for making current tag active
-                  if (e.currentTarget.classList.contains("active")) {
-                    e.currentTarget.classList.remove("active");
-                  } else {
-                    e.currentTarget.classList.add("active");
-                  }
-                }}
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item" key={1}>
-              <Link
-                to={"/feature"}
+              <NavLink
+                to="/feature"
                 className="nav-link "
-                onClick={(e) => {
-                  let atag = document.querySelectorAll(".nav-link");
-                  console.log("atag", atag);
-                  for (let i = 0; i < atag.length; i++) {
-                    if (atag[i].classList.contains("active"))
-                      atag[i].classList.remove("active");
-                  }
-                  if (e.currentTarget.classList.contains("active")) {
-                    e.currentTarget.classList.remove("active");
-                  } else {
-                    e.currentTarget.classList.add("active");
-                  }
-                }}
+                activeClassName="active"
               >
                 Features
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item" key={2}>
-              <Link
+              <NavLink
                 to="pricing"
                 className="nav-link "
-                onClick={(e) => {
-                  let atag = document.querySelectorAll(".nav-link");
-                  for (let i = 0; i < atag.length; i++) {
-                    if (atag[i].classList.contains("active"))
-                      atag[i].classList.remove("active");
-                  }
-                  if (e.currentTarget.classList.contains("active")) {
-                    e.currentTarget.classList.remove("active");
-                  } else {
-                    e.currentTarget.classList.add("active");
-                  }
-                }}
+                activeClassName="active"
               >
                 Pricing
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
