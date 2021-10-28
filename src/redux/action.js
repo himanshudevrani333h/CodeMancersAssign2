@@ -1,4 +1,5 @@
 // Three Actions are created for three row
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 export const PopularCreate = (arr)=>{
   
     return {
@@ -32,7 +33,7 @@ export const singleMovie = (obj)=>{
 export const pupularFetch = ()=>{
 
     return  async (dispatch)=>{
-        let pdata = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=9024101704098faae70f606b58fbcafd")
+        let pdata = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
         let data = await pdata.json();
         console.log("popular data", data.results);
         dispatch(PopularCreate(data.results));
@@ -44,7 +45,7 @@ export const pupularFetch = ()=>{
 export const upcomingFetch =  ()=>{
 
     return async (dispatch)=>{
-        let ucdata = await fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=9024101704098faae70f606b58fbcafd")
+        let ucdata = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
         let ucresult = await ucdata.json();
         console.log("upcomingfetch",ucresult.results);
         dispatch(UpcomingCreate(ucresult.results))
@@ -55,7 +56,7 @@ export const upcomingFetch =  ()=>{
 export const topratedFetch =  ()=>{
 
     return async (dispatch)=>{
-        let trdata = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9024101704098faae70f606b58fbcafd")
+        let trdata = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`)
         let tresult = await trdata.json();
         dispatch(TopRatedCreate(tresult.results))
     }
@@ -64,7 +65,7 @@ export const topratedFetch =  ()=>{
 export const singleMovieFetch =  (movie_id)=>{
     
     return async (dispatch)=>{
-       let obj = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=9024101704098faae70f606b58fbcafd`)
+       let obj = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}`)
        let data = await obj.json();
        console.log("single obj", data);
        dispatch(singleMovie(data));
