@@ -1,5 +1,5 @@
 // Three Actions are created for three row
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 export const PopularCreate = (arr)=>{
   
     return {
