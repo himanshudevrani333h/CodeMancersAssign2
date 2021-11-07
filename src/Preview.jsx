@@ -10,7 +10,6 @@ const Preview = () => {
   const dispatch = useDispatch();
  
   state.then((data)=>{
-    console.log("preview data",data);
     setPstate(data)
   })
 
@@ -21,7 +20,6 @@ const Preview = () => {
   return (
     <div className="previewContainer">
       <div className="upperbox">
-        {console.log("data prev", prevState)}
         {prevState ? (
           <img
             className="prevImg"

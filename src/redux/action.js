@@ -35,7 +35,6 @@ export const pupularFetch = ()=>{
     return  async (dispatch)=>{
         let pdata = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
         let data = await pdata.json();
-        console.log("popular data", data.results);
         dispatch(PopularCreate(data.results));
         
     }
@@ -47,7 +46,6 @@ export const upcomingFetch =  ()=>{
     return async (dispatch)=>{
         let ucdata = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
         let ucresult = await ucdata.json();
-        console.log("upcomingfetch",ucresult.results);
         dispatch(UpcomingCreate(ucresult.results))
     }
 }
@@ -67,7 +65,6 @@ export const singleMovieFetch =  (movie_id)=>{
     return async (dispatch)=>{
        let obj = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}`)
        let data = await obj.json();
-       console.log("single obj", data);
        dispatch(singleMovie(data));
     }
 }

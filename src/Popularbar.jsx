@@ -11,7 +11,6 @@ const Popularbar = () => {
 
   // state gives us a promise so to resolve promise we use .then
   state.then((data) => {
-    console.log("data.pstate ",data);
     setPstate(data.pState);
   });
 
